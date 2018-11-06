@@ -20,7 +20,7 @@ $(document).ready(() => {
      * Neste retorno você era receber um objeto contendo as seguintes informações
      * { auth : true , nonce : ‘hash aleatório gerado pela plataforma’}
      */
-    window.OMID = new OMID('01', 'stag', ['name', 'blockchainid', 'email', 'photo', 'latitude', 'longitude'], function(result){
+    window.OMID = new OMID('01', 'stag', ['name', 'blockchainid', 'email', 'photo', 'latitude', 'longitude','photodocument','photoresidence'], function(result){
         if(result.auth && result.nonce){
             callAuth(result.nonce);
         }
@@ -44,7 +44,7 @@ $(document).ready(() => {
         loginSession.find('span.log-user-mobile_lat').html(result.latitude.value);
         loginSession.find('span.log-user-mobile_lng').html(result.longitude.value);
 
-        photoNonce = result.photo.value;
+        photoNonce = result.photodocument.value;
         startSession.hide();
         loginSession.show();
     }

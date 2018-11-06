@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var CID = '01';
+    var CID = 'ID do CLiente fornecida pela OriginalMy';
     var ENV = 'stag';
     var fields = [
         'birthday',
@@ -17,7 +17,9 @@ $(document).ready(function () {
         'mobile_screensize',
         'phone',
         'photo',
-        'photodocument'
+        'photodocument',
+        'photodocumentback',
+        'photoresidence'
     ];
 
     window.OMID = new OMID(CID, ENV, fields, function(result){
